@@ -1,0 +1,15 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+//
+// The variables you want to modify
+// $font-size-root: 20px;
+
+
+// @import "~vuetify/src/components/VBtn/VBtn.sass";
+
+// reset letter spacing for buttons
+// it make issue in Arabic
+$btn-letter-spacing: 0px;
+
+$body-font-family: inherit;
+
+@import "~vuetify/src/styles/styles.sass";

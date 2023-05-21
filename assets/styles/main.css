@@ -1,0 +1,156 @@
+/* CSS variables */
+:root {
+  --primary-color: #0e6998;
+  --primary-lighent-5-color: #fdf4f6;
+  --primary-lighent-4-color: #f8d5db;
+  --white-color: #ffffff;
+  --green-color: #30bc8f;
+  --black-color: #000000;
+  --grey-color: #9e9e9e;
+  --accept-cookie-index: 10;
+  --navigation-bar-index: 20;
+  --navigation-drawer-index: 30;
+  --loading-overlay-index: 40;
+}
+
+/* tajawal regular font */
+@font-face {
+  font-family: 'Tajawal';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('../fonts/tajawal-v4-latin-regular.woff2') format('woff2'),
+    url('../fonts/tajawal-v4-latin-regular.woff') format('woff');
+}
+
+/* roboto regular font */
+@font-face {
+  font-family: 'Roboto';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  /* Chrome 26+, Opera 23+, Firefox 39+ */
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(''), url('../fonts/roboto-v29-latin-regular.woff2') format('woff2'),
+    url('../fonts/roboto-v29-latin-regular.woff') format('woff');
+}
+
+/* change font-family base on vuetify rtl */
+.v-application.v-application--is-rtl {
+  font-family: 'Arial', sans-serif;
+}
+
+/* change font-family base on vuetify ltr */
+.v-application.v-application--is-ltr {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* vue fade transition css classes */
+.fade-transition-enter-active,
+.fade-transition-leave-active {
+  transition-duration: 0.4s;
+  transition-property: height, opacity;
+  transition-timing-function: ease;
+  overflow: hidden;
+}
+
+.fade-transition-enter,
+.fade-transition-leave-active {
+  opacity: 0;
+}
+/* end of fade transition */
+
+/* Customize scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 50px;
+}
+/* End of Customize scrollbar */
+
+/* css helper classes */
+.v-application .tajawal {
+  font-family: 'Tajawal', sans-serif !important;
+}
+
+.v-application .roboto {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 55px; /* header height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.letter-spacing-none {
+  letter-spacing: 0 !important;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.user-select-none{
+  user-select: none;
+}
+
+.small-line-height {
+  line-height: 1rem !important;
+}
+
+.float-center {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.unset-focus-background-color:focus:before {
+  background-color: unset;
+}
+
+/* to remove 100vh height in html2pdf */
+.invoice-page div.v-application--wrap {
+  min-height: unset !important;
+}
+
+@media print {
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+}
+
+/* End of css helper classes */
